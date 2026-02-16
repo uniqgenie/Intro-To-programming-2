@@ -20,8 +20,6 @@ intel = {
 items = []
 
 
-
-
 def cprint(message, delay=1):
     print(message)
     time.sleep(delay)
@@ -37,8 +35,6 @@ def cprint2(message, width=60, delay=0.6):
 def divider():
     print("\n" + "*" * 60 + "\n")
     time.sleep(0.4)
-
-
 
 
 def get_yes_no(prompt):
@@ -138,7 +134,7 @@ def show_status():
     cprint(f"Inventory (resets each loop): {inv}\n", 0.2)
 
 
-#Intro to Story
+# Intro to Story
 def intro():
     divider()
     cprint2("MAANAADU: TIME LOOP ADVENTURE")
@@ -155,7 +151,7 @@ def intro():
         end_game()
 
 
-#Main
+# Main
 def play():
     global choices
 
@@ -202,7 +198,7 @@ def play():
         # After returning from branch printing loop main menu again.
 
 
-#Location
+# Location
 def main_gate():
     divider()
     cprint2("You approach the MAIN GATE. Guards check passes. Cameras watch.")
@@ -368,7 +364,7 @@ def service_route():
     reset_loop("Wrong turn. A guard shoots you in the corridor.")
 
 
-#Final_step
+# Final_step
 def inside_hub():
     while True:
         divider()
@@ -546,7 +542,7 @@ def final_choice():
 
         if final == 3:
             if "radio" in items:
-                cprint2("Police witness everything and arrest the conspirators.")
+                cprint2("Police witness everything and arrest conspirators")
                 win()
             else:
                 reset_loop("You can't reach police in time. Runner escapes.")
@@ -563,3 +559,4 @@ def start():
 
 if __name__ == "__main__":
     start()
+
